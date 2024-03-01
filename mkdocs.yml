@@ -1,11 +1,11 @@
 site_name: Fucking Code # 站点名称
-site_description: Data Structures and Algorithms and Numerical Calculation Methods # 站点描述
-site_author: Xiaokang2022 # 站点作者
+site_description: Everything about the fucking code. # 站点描述
+site_author: 小康2022 # 站点作者
 site_url: https://Xiaokang2022.github.io/Fucking-Code/ # 站点链接
 repo_name: Xiaokang2022/Fucking-Code # 仓库名称
-repo_url: https://github.com/Xiaokang2022/Fucking-Code # 仓库地址
-edit_uri: edit/master/docs/ # 编辑地址（页面会出现编辑按钮）
-copyright: Copyright &copy; 2024 Xiaokang2022 # 版权信息（会出现在左下角）
+repo_url: https://github.com/Xiaokang2022/Fucking-Code/ # 仓库地址
+edit_uri: edit/main/docs/ # 编辑地址（页面会出现编辑按钮）
+copyright: Copyright &copy; 2024 小康2022 # 版权信息（会出现在左下角）
 remote_branch: gh-pages # GitHub Pages 分支名称（此处为默认值）
 
 markdown_extensions: # Python Markdown 官方扩展
@@ -26,7 +26,9 @@ markdown_extensions: # Python Markdown 官方扩展
   - pymdownx.inlinehilite # 支持行内代码块高亮，如 `#!python range()`
 
   - toc: # 目录设置
-      permalink: true
+      permalink: true # 启用目录锚点
+      title: 此页面 # 在右侧导航侧边栏中设置目录的标题
+      permalink_title: 锚链接到此部分以供参考 # 设置锚点链接的标题
 
   - pymdownx.arithmatex: # 允许数学表达式，即 $$y=x+1$$，或行内的 $x=1$
       generic: true
@@ -112,7 +114,7 @@ theme: # 主题设置
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal # 明亮标题栏颜色
+      primary: white # 明亮标题栏颜色
       accent: pink # 明亮链接高亮颜色
       toggle:
         icon: material/brightness-7
@@ -137,7 +139,7 @@ theme: # 主题设置
     repo: fontawesome/brands/github # 右上角仓库图标
     edit: material/pencil # 页面编辑的图标
     view: material/eye # 页面查看源代码的图标
-    annotation: material/arrow-right-circle # 提示按钮的图标，详细操作见 https://squidfunk.github.io/mkdocs-material/reference/annotations/#in-content-tabs-tab-1
+    # annotation: material/arrow-right-circle # 提示按钮的图标，详细操作见 https://squidfunk.github.io/mkdocs-material/reference/annotations/#in-content-tabs-tab-1
 
 extra: # 额外设定
   homepage: . # 左上角徽标链接的地址（此处为根目录，即主页）
@@ -148,18 +150,6 @@ extra: # 额外设定
     - icon: fontawesome/brands/github
       link: https://github.com/Xiaokang2022/Fucking-Code/
       name: GitHub 仓库连接
-  # alternate: # 语言支持
-  #   # Switch to Chinese
-  #   - name: 中文
-  #     link: /
-  #     lang: zh
-  #   # Switch to English
-  #   - name: English
-  #     link: /Fucking-Code/en/
-  #     lang: en
-  # version: # 版本支持
-  #   provider: mike
-  #   default: stable
 
 extra_javascript: # 保证数学表达式能正确显示的运行时环境
   - javascripts/mathjax.js
@@ -179,9 +169,6 @@ plugins: # 插件
       type: datetime # 每页底下显示最后更新日期（除开 index）
   - git-authors # 需 pip install mkdocs-git-authors-plugin
   - glightbox # 图像缩放，需 pip install mkdocs-glightbox
-  # - git-committers: # 需 pip install mkdocs-git-committers-plugin-2
-  #     repository: Xiaokang2022/Fucking-Code
-  #     branch: main
 
 nav: # 导航栏
   - 主页:
