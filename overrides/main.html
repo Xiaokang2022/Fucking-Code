@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+<!-- 类别详细见 https://squidfunk.github.io/mkdocs-material/customization/ -->
+
+{% block announce %}
+{{ super() }}
+<p>欢迎来到我的个人网站，您可以在这里随便看看，祝您开心！❤️</p>
+{% endblock %}
+
+{% block libs %}
+{{ super() }}
+<!-- <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> -->
+<script src="https://xiaokang2022.github.io/Fucking-Code/live2d-widget/autoload.js"></script>
+{% endblock %}
+
+<!-- {% block script %}
+{{ super() }}
+<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+<script>
+    L2Dwidget.init({
+        "model": {
+            // 替换模型 
+            // jsonPath: "https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json",
+            jsonPath: "https://unpkg.com/live2d-widget-model-hijiki@1.0.5/assets/hijiki.model.json",
+            // jsonPath: 'https://unpkg.com/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json',
+            // jsonPath: 'https://unpkg.com/live2d-widget-model-z16@1.0.5/assets/z16.model.json',
+            // jsonPath: 'https://unpkg.com/live2d-widget-model-hibiki@1.0.5/assets/hibiki.model.json',
+            // jsonPath: 'https://unpkg.com/live2d-widget-model-ni-j@1.0.5/assets/ni-j.model.json',
+            // jsonPath: 'https://unpkg.com/live2d-widget-model-nipsilon@1.0.5/assets/nipsilon.model.json',
+            // jsonPath: 'https://unpkg.com/live2d-widget-model-nito@1.0.5/assets/nito.model.json',
+            // jsonPath: 'https://unpkg.com/live2d-widget-model-tsumiki@1.0.5/assets/tsumiki.model.json',
+            // jsonPath: 'https://unpkg.com/live2d-widget-model-unitychan@1.0.5/assets/unitychan.model.json',
+            // jsonPath: 'https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json',
+            // jsonPath: 'https://unpkg.com/live2d-widget-model-haruto@1.0.5/assets/haruto.model.json',
+            // jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
+
+            "scale": 1
+        },
+        "display": {
+
+            "position": "right",
+            "width": 120,
+            "height": 300,
+            "hOffset": 0,
+            "vOffset": -20
+        },
+        "mobile": {
+            "show": false,
+            "scale": 0.3
+        },
+        "react": {
+            "opacityDefault": 0.8,
+            "opacityOnHover": 0.2
+        }
+    });
+</script>
+
+{% endblock %} -->

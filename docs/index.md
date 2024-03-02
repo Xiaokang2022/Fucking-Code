@@ -28,6 +28,5 @@ Everything about the fucking code
 
 ## 更多
 
-- 项目许可证: [LICENSE.txt](./LICENSE.md)
-- 贡献指南: [CONTRIBUTING.md](./CONTRIBUTING.md)
 - 关于: [About.md](./About.md)
+- 项目许可证: [LICENSE.txt](./LICENSE.md)
