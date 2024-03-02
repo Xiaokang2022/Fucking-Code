@@ -24,11 +24,12 @@ markdown_extensions: # Python Markdown 官方扩展
   - pymdownx.smartsymbols # 允许上下标，如 x^2^（x²）
   - pymdownx.details # 允许提示框与文本左右布局，而非原来的上下布局，如 !!! note inline "Hint"（左），!!! note inline end（右）
   - pymdownx.inlinehilite # 支持行内代码块高亮，如 `#!python range()`
+  - pymdownx.snippets # 允许外联任何内容
 
   - toc: # 目录设置
       permalink: true # 启用目录锚点
-      title: 此页面 # 在右侧导航侧边栏中设置目录的标题
-      permalink_title: 锚链接到此部分以供参考 # 设置锚点链接的标题
+      title: 目录 # 在右侧导航侧边栏中设置目录的标题
+      permalink_title: 点击即可链接到锚点 # 设置锚点链接的标题
 
   - pymdownx.arithmatex: # 允许数学表达式，即 $$y=x+1$$，或行内的 $x=1$
       generic: true
@@ -50,10 +51,6 @@ markdown_extensions: # Python Markdown 官方扩展
       line_spans: __span # 这对于行突出显示等功能正常工作至关重要
       pygments_lang_class: true # 对于自定义注释标记的功能至关重要
       # auto_title: true # 自动为所有代码块添加一个标题
-
-  - pymdownx.snippets: # 允许外部加载代码
-      auto_append:
-        - includes/mkdocs.md
 
   - pymdownx.superfences: # 允许各种嵌套
       custom_fences:
@@ -89,7 +86,7 @@ theme: # 主题设置
     - content.tabs.link # 同样的标签，整个网站的同步切换，如 C -> C++，则其它类似的全部标签都同步切换
     - content.tooltips # 脚注提示
     - navigation.expand # 左侧边栏节点至多展开一个
-    - navigation.indexes # 左侧边栏节点是否包含 index 页面
+    # - navigation.indexes # 左侧边栏节点是否包含 index 页面
     # - navigation.footer # 页面底下换页的支持
     - navigation.instant # 页面加载无需完全加载
     - navigation.instant.progress # 加载速度慢时，在页面顶部显示加载进度
@@ -131,8 +128,8 @@ theme: # 主题设置
   font: # 字体
     text: Microsoft YaHei # 文本
     code: consolas # 代码
-  logo: logo.png # 页面左上角徽标
-  favicon: logo.png # 网页的图标
+  logo: images/logo.png # 页面左上角徽标
+  favicon: images/logo.png # 网页的图标
   icon:
     previous: fontawesome/solid/angle-left # 左下角向前翻页的图标
     next: fontawesome/solid/angle-right # 右下角向后翻页的图标
@@ -150,6 +147,13 @@ extra: # 额外设定
     - icon: fontawesome/brands/github
       link: https://github.com/Xiaokang2022/Fucking-Code/
       name: GitHub 仓库连接
+  alternate: # 可选语言
+    - name: 简体中文 # 语言名称
+      link: /Fucking-Code/index.html # 链接
+      lang: zh # 语言
+    - name: English
+      link: /Fucking-Code/404.html
+      lang: en
 
 extra_javascript: # 保证数学表达式能正确显示的运行时环境
   - javascripts/mathjax.js
@@ -173,15 +177,43 @@ plugins: # 插件
 nav: # 导航栏
   - 主页:
       - 开始: index.md
-      - 贡献指南: CONTRIBUTING.md
       - 项目许可证: LICENSE.md
+      - 贡献指南: CONTRIBUTING.md
       - 关于: About.md
 
   - 数据结构:
       - Data Structures/Hello World.md
 
   - 算法:
-      - Algorithms/Hello World.md
+      - 排序:
+          - 直接插入排序: Algorithms/sort/straight_insertion_sort.md
+          - 二分插入排序: Algorithms/sort/binary_insertion_sort.md
+          - 分组插入排序（希尔排序）: Algorithms/sort/shell_sort.md
+          - 直接选择排序: Algorithms/sort/straight_selection_sort.md
+          - 树形选择排序（锦标赛排序）: Algorithms/sort/tournament_sort.md
+          - 简单交换排序（冒泡排序）: Algorithms/sort/bubble_sort.md
+          - 标记交换排序（改进的冒泡排序）: Algorithms/sort/improved_bubble_sort.md
+          - 分区交换排序（快速排序）: Algorithms/sort/quick_sort.md
+          - 随机基准分区交换排序（改进的快速排序）: Algorithms/sort/random_quick_sort.md
+          - 三数取中分区交换排序（改进的快速排序）: Algorithms/sort/improved_quick_sort.md
+          - 归并排序: Algorithms/sort/merge_sort.md
+          - 计数排序: Algorithms/sort/counting_sort.md
+          - 基数排序: Algorithms/sort/radix_sort.md
+          - 堆排序: Algorithms/sort/heap_sort.md
+          - 桶排序: Algorithms/sort/bucket_sort.md
+          - tim_sort: Algorithms/sort/tim_sort.md
+          - pdq_sort: Algorithms/sort/pdq_sort.md
+      # - 查找（搜索）:
+      #     - 顺序查找:
+      #     - 二分查找:
+      #     - 分块查找:
+      #     - 散列查找:
+      # - 预处理:
+      #     - 前缀和:
+      #     - 差分:
+      # - 快速 IO:
+      #     - 输入:
+      #     - 输出:
 
   - 数值计算方法:
       - Numerical Calculation/Hello World.md
@@ -193,7 +225,7 @@ nav: # 导航栏
       - C/Hello World.md
 
   - C++:
-      - Cpp/Hello World.md
+      - C++/Hello World.md
 
   - Python:
       - Python/Hello World.md
@@ -202,5 +234,5 @@ nav: # 导航栏
       - Java/Hello World.md
 
   - 其它:
-      - XXX: Others/Hello World.md
+      - Others/Hello World.md
 # Upload Docs   : mkdocs gh-deploy
