@@ -12,24 +12,28 @@
         <meta name="author" content="小康2022">
       
       
-        <link rel="canonical" href="https://Xiaokang2022.github.io/Fucking-Code/en/index.html">
+        <link rel="canonical" href="https://Xiaokang2022.github.io/Fucking-Code/Algorithms/sort/quick_sort.html">
       
       
+        <link rel="prev" href="improved_bubble_sort.html">
       
       
-      <link rel="icon" href="../logo.png">
+        <link rel="next" href="random_quick_sort.html">
+      
+      
+      <link rel="icon" href="../../images/logo.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
     
     
       
-        <title>Index - Fucking Code</title>
+        <title>分区交换排序（快速排序） - Fucking Code</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +54,14 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -66,7 +70,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -94,9 +98,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="Fucking Code" class="md-header__button md-logo" aria-label="Fucking Code" data-md-component="logo">
+    <a href="../.." title="Fucking Code" class="md-header__button md-logo" aria-label="Fucking Code" data-md-component="logo">
       
-  <img src="../logo.png" alt="logo">
+  <img src="../../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              分区交换排序（快速排序）
             
           </span>
         </div>
@@ -159,6 +163,32 @@
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/Fucking-Code/index.html" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Fucking-Code/404.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
       <label class="md-header__button md-icon" for="__search">
@@ -239,10 +269,8 @@
     
     
       <li class="md-tabs__item">
-        <a href="../index.html" class="md-tabs__link">
+        <a href="../../index.html" class="md-tabs__link">
           
-  
-    
   
   主页
 
@@ -259,10 +287,8 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Data%20Structures/Hello%20World.html" class="md-tabs__link">
+        <a href="../../Data%20Structures/Hello%20World.html" class="md-tabs__link">
           
-  
-    
   
   数据结构
 
@@ -275,19 +301,30 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../Algorithms/Hello%20World.html" class="md-tabs__link">
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="straight_insertion_sort.html" class="md-tabs__link">
           
-  
-    
   
   算法
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -299,10 +336,8 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Numerical%20Calculation/Hello%20World.html" class="md-tabs__link">
+        <a href="../../Numerical%20Calculation/Hello%20World.html" class="md-tabs__link">
           
-  
-    
   
   数值计算方法
 
@@ -319,10 +354,8 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Tools/Hello%20World.html" class="md-tabs__link">
+        <a href="../../Tools/Hello%20World.html" class="md-tabs__link">
           
-  
-    
   
   工具推荐
 
@@ -339,10 +372,8 @@
     
     
       <li class="md-tabs__item">
-        <a href="../C/Hello%20World.html" class="md-tabs__link">
+        <a href="../../C/Hello%20World.html" class="md-tabs__link">
           
-  
-    
   
   C
 
@@ -359,10 +390,8 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Cpp/Hello%20World.html" class="md-tabs__link">
+        <a href="../../C%2B%2B/Hello%20World.html" class="md-tabs__link">
           
-  
-    
   
   C++
 
@@ -379,10 +408,8 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Python/Hello%20World.html" class="md-tabs__link">
+        <a href="../../Python/Hello%20World.html" class="md-tabs__link">
           
-  
-    
   
   Python
 
@@ -399,10 +426,8 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Java/Hello%20World.html" class="md-tabs__link">
+        <a href="../../Java/Hello%20World.html" class="md-tabs__link">
           
-  
-    
   
   Java
 
@@ -419,10 +444,8 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Others/Hello%20World.html" class="md-tabs__link">
+        <a href="../../Others/Hello%20World.html" class="md-tabs__link">
           
-  
-    
   
   其它
 
@@ -454,9 +477,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Fucking Code" class="md-nav__button md-logo" aria-label="Fucking Code" data-md-component="logo">
+    <a href="../.." title="Fucking Code" class="md-nav__button md-logo" aria-label="Fucking Code" data-md-component="logo">
       
-  <img src="../logo.png" alt="logo">
+  <img src="../../images/logo.png" alt="logo">
 
     </a>
     Fucking Code
@@ -484,18 +507,6 @@
   
     
     
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
     
       
       
@@ -511,7 +522,7 @@
         
   
   
-    <a href="../index.html" class="md-nav__link">
+    <a href="../../index.html" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -538,10 +549,6 @@
   
     
     
-      
-        
-      
-    
     
       
       
@@ -557,7 +564,7 @@
         
   
   
-    <a href="../Data%20Structures/Hello%20World.html" class="md-nav__link">
+    <a href="../../Data%20Structures/Hello%20World.html" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -580,43 +587,464 @@
       
   
   
+    
   
   
+  
     
-    
-      
-        
-      
-    
-    
-      
-      
     
     
       
         
         
       
+      
     
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
-  
-  
-    <a href="../Algorithms/Hello%20World.html" class="md-nav__link">
-      
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
   
   <span class="md-ellipsis">
     算法
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
       
-        <span class="md-nav__icon md-icon"></span>
       
-    </a>
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    排序
+  </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            排序
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="straight_insertion_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    直接插入排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="binary_insertion_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    二分插入排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="shell_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    分组插入排序（希尔排序）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="straight_selection_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    直接选择排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tournament_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    树形选择排序（锦标赛排序）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bubble_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简单交换排序（冒泡排序）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="improved_bubble_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    标记交换排序（改进的冒泡排序）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="quick_sort.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    分区交换排序（快速排序）
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="random_quick_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    随机基准分区交换排序（改进的快速排序）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="improved_quick_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    三数取中分区交换排序（改进的快速排序）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="merge_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    归并排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="counting_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计数排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="radix_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基数排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="heap_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    堆排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bucket_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    桶排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tim_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tim_sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pdq_sort.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pdq_sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -630,10 +1058,6 @@
   
     
     
-      
-        
-      
-    
     
       
       
@@ -649,7 +1073,7 @@
         
   
   
-    <a href="../Numerical%20Calculation/Hello%20World.html" class="md-nav__link">
+    <a href="../../Numerical%20Calculation/Hello%20World.html" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -676,10 +1100,6 @@
   
     
     
-      
-        
-      
-    
     
       
       
@@ -695,7 +1115,7 @@
         
   
   
-    <a href="../Tools/Hello%20World.html" class="md-nav__link">
+    <a href="../../Tools/Hello%20World.html" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -722,10 +1142,6 @@
   
     
     
-      
-        
-      
-    
     
       
       
@@ -741,7 +1157,7 @@
         
   
   
-    <a href="../C/Hello%20World.html" class="md-nav__link">
+    <a href="../../C/Hello%20World.html" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -768,10 +1184,6 @@
   
     
     
-      
-        
-      
-    
     
       
       
@@ -787,7 +1199,7 @@
         
   
   
-    <a href="../Cpp/Hello%20World.html" class="md-nav__link">
+    <a href="../../C%2B%2B/Hello%20World.html" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -814,10 +1226,6 @@
   
     
     
-      
-        
-      
-    
     
       
       
@@ -833,7 +1241,7 @@
         
   
   
-    <a href="../Python/Hello%20World.html" class="md-nav__link">
+    <a href="../../Python/Hello%20World.html" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -860,10 +1268,6 @@
   
     
     
-      
-        
-      
-    
     
       
       
@@ -879,7 +1283,7 @@
         
   
   
-    <a href="../Java/Hello%20World.html" class="md-nav__link">
+    <a href="../../Java/Hello%20World.html" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -906,10 +1310,6 @@
   
     
     
-      
-        
-      
-    
     
       
       
@@ -925,7 +1325,7 @@
         
   
   
-    <a href="../Others/Hello%20World.html" class="md-nav__link">
+    <a href="../../Others/Hello%20World.html" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -959,7 +1359,7 @@
 
   
 
-<nav class="md-nav md-nav--secondary" aria-label="此页面">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -977,7 +1377,7 @@
                   
 
   
-    <a href="https://github.com/Xiaokang2022/Fucking-Code/edit/main/docs/en/index.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Xiaokang2022/Fucking-Code/edit/main/docs/Algorithms/sort/quick_sort.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -986,14 +1386,14 @@
     
       
     
-    <a href="https://github.com/Xiaokang2022/Fucking-Code/raw/main/docs/en/index.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/Xiaokang2022/Fucking-Code/raw/main/docs/Algorithms/sort/quick_sort.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-  <h1>Index</h1>
+  <h1>分区交换排序（快速排序）</h1>
 
 
 
@@ -1018,7 +1418,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 1, 2024 20:36:59</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 2, 2024 15:44:51</span>
   </span>
 
     
@@ -1114,12 +1514,12 @@
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.prune", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.expand", "navigation.instant", "navigation.instant.progress", "navigation.prune", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
