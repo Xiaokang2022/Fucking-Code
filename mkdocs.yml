@@ -80,7 +80,7 @@ markdown_extensions: # Python Markdown 官方扩展
 
 theme: # 主题设置
   name: material # 第三方主题名称
-  custom_dir: overrides # 覆盖部分原来的主题
+  custom_dir: docs/overrides # 覆盖部分原来的主题
   language: zh # material 语言
   features:
     # - header.autohide # 顶栏自动隐藏
@@ -187,7 +187,6 @@ plugins: # 插件
 
 watch:
   - docs/
-  - overrides/
   - sources/
   - mkdocs.yml
 
@@ -219,11 +218,10 @@ nav: # 导航栏
           - 桶排序: Algorithms/sort/bucket_sort.md
           - tim_sort: Algorithms/sort/tim_sort.md
           - pdq_sort: Algorithms/sort/pdq_sort.md
-      # - 查找（搜索）:
-      #     - 顺序查找:
-      #     - 二分查找:
-      #     - 分块查找:
-      #     - 散列查找:
+      - 查找（搜索）:
+          - 顺序查找: Algorithms/search/seq_search.md
+          - 二分查找: Algorithms/search/binary_search.md
+          - 散列查找: Algorithms/search/hash_search.md
       # - 预处理:
       #     - 前缀和:
       #     - 差分:
