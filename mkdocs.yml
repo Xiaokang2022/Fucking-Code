@@ -202,6 +202,7 @@ nav: # 导航栏
       - 贡献指南: Contributing.md
       - 更新日志: ChangeLog.md
       - 项目许可证: LICENSE.md
+      - 建议区: Suggest.md
 
   - 数据结构:
       - Data Structure/Hello World.md
