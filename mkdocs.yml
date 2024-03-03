@@ -159,7 +159,7 @@ extra: # 额外设定
       name: 联系作者
 
 extra_javascript:
-  - extra/javascripts/mathjax.js # 保证数学表达式能正确显示的运行时环境
+  - extra/js/mathjax.js # 保证数学表达式能正确显示的运行时环境
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 

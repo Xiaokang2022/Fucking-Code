@@ -22,7 +22,32 @@ comments: true
 
 ### 1.2 流程图
 
-暂无
+注：以下面 C++ 语言的实现过程为准
+
+```mermaid
+flowchart TB
+    START(["开始"])
+    END(["结束"])
+    in1[/"接收参数：T* arr, int n"/]
+    if1{"判断：j ≥ 0 ?"}
+    if2{"判断：tmp < arr[i] ?"}
+    if3{"判断：i < n ?"}
+    def1("定义：T tmp")
+    def2("定义：int j")
+    def3("定义：int i")
+    op1["右移：arr[j + 1] = arr[j]"]
+    op2["插入：arr[j + 1] = tmp"]
+    op3["j--"]
+    op4["i++"]
+    op5["赋值：j = i - 1"]
+    op6["赋值：tmp = arr[i]"]
+    op7["赋值：i = 1"]
+
+    START --> in1 --> def2 --> def3 --> op7 --> if3 --True--> END
+    if3 --True--> def1 --> op6 --> op5 --> if1 --False--> op2 --> op4 --> if3
+    if1 --True--> if2 --False--> op2
+    if2 --True--> op1 --> op3 --> if1
+```
 
 ## 二、实现代码
 
@@ -105,10 +130,6 @@ comments: true
     6 6 13 20 28 39 41 72 85
     ```
 
-### 2.3 相关习题
-
-暂无
-
 ## 三、算法性质
 
 ### 3.1 时空复杂度
@@ -166,5 +187,19 @@ $$
 #### 3.2.2 排序方式分析
 
 排序方式属于内部排序，没有用到外部的空间。
+
+## 四、相关习题
+
+注：习题不保证与上述算法一定相关，只是可能相关
+
+### 4.1 编程题
+
+- [ ] [洛谷 - P7910 [CSP-J 2021]](https://www.luogu.com.cn/problem/P7910)
+- [ ] [力扣 - 147](https://leetcode.cn/problems/insertion-sort-list/description/)
+- [ ] [力扣 - 面试题 05.01](https://leetcode.cn/problems/insert-into-bits-lcci/description/)
+
+### 4.2 选择题
+
+- [ ] [牛客 - 试题广场](https://www.nowcoder.com/questionTerminal/4ee287d1d96a4aea9fc83d29e7ce9695?)
 
 [^1]: [直接插入排序 · 百度百科](https://baike.baidu.com/item/%E7%9B%B4%E6%8E%A5%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/8255911)
