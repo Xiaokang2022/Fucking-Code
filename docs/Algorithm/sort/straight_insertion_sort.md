@@ -30,26 +30,26 @@ comments: true
 
 推荐学习 C++ 版本，更利于理解算法的本质。另外，下面 Python 的实现方式与其它三个略微有些不同，请注意。
 
-=== "👍 C 17"
+=== "🟣 C 17"
 
     ```C
-    --8<-- "sources/Algorithms/sort/C/straight_insertion_sort.c"
+    --8<-- "sources/Algorithm/sort/C/straight_insertion_sort.c"
     ```
 
     1. 相等时，被比较元素原来在前面的就不用右移了，保证稳定性
     
-=== "⚡ C++ 20"
+=== "🔴 C++ 20"
 
     ```C++
-    --8<-- "sources/Algorithms/sort/C++/straight_insertion_sort.cpp"
+    --8<-- "sources/Algorithm/sort/C++/straight_insertion_sort.cpp"
     ```
 
     1. 相等时，被比较元素原来在前面的就不用右移了，保证稳定性
     
-=== "🐍 Python 3.12"
+=== "🔵 Python 3.12"
 
     ```Python
-    --8<-- "sources/Algorithms/sort/Python/straight_insertion_sort.py"
+    --8<-- "sources/Algorithm/sort/Python/straight_insertion_sort.py"
     ```
 
     1. 相等时，不确定位置的元素的位置也能确定了，一定在当前被比较元素的右边
@@ -57,24 +57,51 @@ comments: true
     !!! Tip "提示"
         若要实现 C/C++ 那样，通过参数 n 只排序前几个元素的话，可采用对列表切片引用的方式传参，可达到相同效果。
 
-=== "☕ Java 21"
+=== "🟠 Java 21"
 
     ```Java
-    --8<-- "sources/Algorithms/sort/Java/straight_insertion_sort.java"
+    --8<-- "sources/Algorithm/sort/Java/straight_insertion_sort.java"
     ```
 
     1. 相等时，被比较元素原来在前面的就不用右移了，保证稳定性
 
+    !!! Tip "提示"
+        若要实现 C/C++ 那样，通过参数 n 只排序前几个元素的话，可采用数组切片的方式传参，可达到相同效果。
+
+=== "🟢 C# 12"
+
+    ```C#
+    --8<-- "sources/Algorithm/sort/C#/straight_insertion_sort.cs"
+    ```
+
+    1. 相等时，被比较元素原来在前面的就不用右移了，保证稳定性
+
+    !!! Tip "提示"
+        若要实现 C/C++ 那样，通过参数 n 只排序前几个元素的话，可采用数组切片的方式传参，可达到相同效果。
+
+=== "🟡 JavaScript 6"
+
+    ```JavaScript
+    --8<-- "sources/Algorithm/sort/JavaScript/straight_insertion_sort.js"
+    ```
+
+    1. 相等时，被比较元素原来在前面的就不用右移了，保证稳定性
+
+    !!! Tip "提示"
+        若要实现 C/C++ 那样，通过参数 n 只排序前几个元素的话，可采用 slice 方法对数组切片的方式传参，可达到相同效果。
+
+        JavaScript 无显式的泛型声明，此处不会使用 JSdoc 实现类似的效果，请注意。
+
 ### 2.2 测试用例
 
-=== "🔻输入"
+=== "🔻输入数据"
     
     ```text
     9
     6 28 13 72 85 39 41 6 20
     ```
 
-=== "🔺输出"
+=== "🔺输出数据"
 
     ```text
     6 6 13 20 28 39 41 72 85

@@ -132,8 +132,8 @@ theme: # 主题设置
         icon: material/brightness-4
         name: 切换至系统主题
   font: false # 避免从谷歌加载字体导致网页加载变慢
-  logo: images/logo.png # 页面左上角徽标
-  favicon: images/logo.png # 网页的图标
+  logo: logo.png # 页面左上角徽标
+  favicon: logo.png # 网页的图标
   icon:
     previous: fontawesome/solid/angle-left # 左下角向前翻页的图标
     next: fontawesome/solid/angle-right # 右下角向后翻页的图标
@@ -150,22 +150,21 @@ extra: # 额外设定
   social: # 社交联系方式（页面右下角内容）
     - icon: fontawesome/brands/github
       link: https://github.com/Xiaokang2022/Fucking-Code/
-      name: GitHub 仓库连接
-  alternate: # 可选语言
-    - name: 简体中文 # 语言名称
-      link: /Fucking-Code/index.html # 链接
-      lang: zh # 语言
-    - name: English
-      link: /Fucking-Code/404.html
-      lang: en
+      name: GitHub 仓库
+    - icon: fontawesome/solid/house
+      link: https://xiaokang2022.github.io/Fucking-Code/
+      name: 主页
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:2951256653@qq.com
+      name: 联系作者
 
 extra_javascript:
-  - javascripts/mathjax.js # 保证数学表达式能正确显示的运行时环境
+  - extra/javascripts/mathjax.js # 保证数学表达式能正确显示的运行时环境
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
-  - css/extra.css
+  - extra/css/extra.css
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css
@@ -205,32 +204,32 @@ nav: # 导航栏
       - 项目许可证: LICENSE.md
 
   - 数据结构:
-      - Data Structures/Hello World.md
+      - Data Structure/Hello World.md
 
   - 算法:
       - 排序:
-          - 直接插入排序: Algorithms/sort/straight_insertion_sort.md
-          - 二分插入排序: Algorithms/sort/binary_insertion_sort.md
-          - 分组插入排序（希尔排序）: Algorithms/sort/shell_sort.md
-          - 直接选择排序: Algorithms/sort/straight_selection_sort.md
-          - 树形选择排序（锦标赛排序）: Algorithms/sort/tournament_sort.md
-          - 简单交换排序（冒泡排序）: Algorithms/sort/bubble_sort.md
-          - 标记交换排序（改进的冒泡排序）: Algorithms/sort/improved_bubble_sort.md
-          - 分区交换排序（快速排序）: Algorithms/sort/quick_sort.md
-          - 随机基准分区交换排序（改进的快速排序）: Algorithms/sort/random_quick_sort.md
-          - 三数取中分区交换排序（改进的快速排序）: Algorithms/sort/improved_quick_sort.md
-          - 归并排序: Algorithms/sort/merge_sort.md
-          - 计数排序: Algorithms/sort/counting_sort.md
-          - 基数排序: Algorithms/sort/radix_sort.md
-          - 堆排序: Algorithms/sort/heap_sort.md
-          - 桶排序: Algorithms/sort/bucket_sort.md
-          - tim_sort: Algorithms/sort/tim_sort.md
-          - pdq_sort: Algorithms/sort/pdq_sort.md
+          - 直接插入排序: Algorithm/sort/straight_insertion_sort.md
+          - 二分插入排序: Algorithm/sort/binary_insertion_sort.md
+          - 分组插入排序（希尔排序）: Algorithm/sort/shell_sort.md
+          - 直接选择排序: Algorithm/sort/straight_selection_sort.md
+          - 树形选择排序（锦标赛排序）: Algorithm/sort/tournament_sort.md
+          - 简单交换排序（冒泡排序）: Algorithm/sort/bubble_sort.md
+          - 标记交换排序（改进的冒泡排序）: Algorithm/sort/improved_bubble_sort.md
+          - 分区交换排序（快速排序）: Algorithm/sort/quick_sort.md
+          - 随机基准分区交换排序（改进的快速排序）: Algorithm/sort/random_quick_sort.md
+          - 三数取中分区交换排序（改进的快速排序）: Algorithm/sort/improved_quick_sort.md
+          - 归并排序: Algorithm/sort/merge_sort.md
+          - 计数排序: Algorithm/sort/counting_sort.md
+          - 基数排序: Algorithm/sort/radix_sort.md
+          - 堆排序: Algorithm/sort/heap_sort.md
+          - 桶排序: Algorithm/sort/bucket_sort.md
+          - tim_sort: Algorithm/sort/tim_sort.md
+          - pdq_sort: Algorithm/sort/pdq_sort.md
       - 查找（搜索）:
-          - 顺序查找: Algorithms/search/seq_search.md
-          - 分块查找（改进的顺序查找）: Algorithms/search/block_search.md
-          - 二分查找: Algorithms/search/binary_search.md
-          - 散列查找: Algorithms/search/hash_search.md
+          - 顺序查找: Algorithm/search/seq_search.md
+          - 分块查找（改进的顺序查找）: Algorithm/search/block_search.md
+          - 二分查找: Algorithm/search/binary_search.md
+          - 散列查找: Algorithm/search/hash_search.md
       # - 预处理:
       #     - 前缀和:
       #     - 差分:
@@ -238,23 +237,21 @@ nav: # 导航栏
       #     - 输入:
       #     - 输出:
 
-  - 数值计算方法:
+  - 数值计算:
       - Numerical Calculation/Hello World.md
-
-  - 工具推荐:
-      - Tools/Hello World.md
-
+  - 设计模式:
+      - Design Pattern/Hello World.md
   - C:
       - C/Hello World.md
-
   - C++:
       - C++/Hello World.md
-
   - Python:
       - Python/Hello World.md
-
   - Java:
       - Java/Hello World.md
-
+  - C#:
+      - C#/Hello World.md
+  - JavaScript:
+      - JavaScript/Hello World.md
   - 其它:
-      - Others/Hello World.md
+      - Other/Hello World.md
