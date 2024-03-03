@@ -161,11 +161,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://Xiaokang2022.github.io/Fucking-Code/JavaScript/Hello%20World/</loc>
-         <lastmod>2024-03-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://Xiaokang2022.github.io/Fucking-Code/Numerical%20Calculation/Hello%20World/</loc>
          <lastmod>2024-03-03</lastmod>
          <changefreq>daily</changefreq>
@@ -177,6 +172,11 @@
     </url>
     <url>
          <loc>https://Xiaokang2022.github.io/Fucking-Code/Python/Hello%20World/</loc>
+         <lastmod>2024-03-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Xiaokang2022.github.io/Fucking-Code/TypeScript/Hello%20World/</loc>
          <lastmod>2024-03-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
