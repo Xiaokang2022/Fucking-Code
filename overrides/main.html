@@ -7,3 +7,17 @@
 {{ super() }}
 <p>欢迎来到 Fucking Code 官网！😆</p>
 {% endblock %}
+
+<!-- 百度统计脚本 -->
+{% block header %}
+{{ super() }}
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?979cde316e88f0a5cb308e8704c79619";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+{% endblock %}
