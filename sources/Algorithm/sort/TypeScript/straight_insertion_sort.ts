@@ -1,4 +1,4 @@
-function straight_insertion_sort(arr) {
+function straight_insertion_sort<T extends number | string>(arr: T[]): void {
     let j; // 当前被比较元素的索引
     for (let i = 1; i < arr.length; i++) {
         let tmp = arr[i]; // 取出不确定位置的元素

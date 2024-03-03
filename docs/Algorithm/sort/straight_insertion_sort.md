@@ -46,7 +46,7 @@ comments: true
 
     1. 相等时，被比较元素原来在前面的就不用右移了，保证稳定性
     
-=== "🔵 Python 3.12"
+=== "🔵 Python 3"
 
     ```Python
     --8<-- "sources/Algorithm/sort/Python/straight_insertion_sort.py"
@@ -79,18 +79,16 @@ comments: true
     !!! Tip "提示"
         若要实现 C/C++ 那样，通过参数 n 只排序前几个元素的话，可采用数组切片的方式传参，可达到相同效果。
 
-=== "🟡 JavaScript 6"
+=== "🟡 TypeScript 5"
 
-    ```JavaScript
-    --8<-- "sources/Algorithm/sort/JavaScript/straight_insertion_sort.js"
+    ```TypeScript
+    --8<-- "sources/Algorithm/sort/TypeScript/straight_insertion_sort.ts"
     ```
 
     1. 相等时，被比较元素原来在前面的就不用右移了，保证稳定性
 
     !!! Tip "提示"
         若要实现 C/C++ 那样，通过参数 n 只排序前几个元素的话，可采用 slice 方法对数组切片的方式传参，可达到相同效果。
-
-        JavaScript 无显式的泛型声明，此处不会使用 JSdoc 实现类似的效果，请注意。
 
 ### 2.2 测试用例
 

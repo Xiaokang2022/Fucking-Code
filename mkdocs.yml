@@ -251,7 +251,7 @@ nav: # 导航栏
       - Java/Hello World.md
   - C#:
       - C#/Hello World.md
-  - JavaScript:
-      - JavaScript/Hello World.md
+  - TypeScript:
+      - TypeScript/Hello World.md
   - 其它:
       - Other/Hello World.md
