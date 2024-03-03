@@ -36,7 +36,7 @@ Everything about the fucking code!
     - 总页面：{{ pages }}
     - 总字（词）数：{{ words }}
     - 总代码行数：{{ codes }}
-    - 总访问量：
+    - 总访问量：<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>
 
 - 关于: [About.md](./About.md)
 - 贡献指南: [Contributing.md](./Contributing.md)
