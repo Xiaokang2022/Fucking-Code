@@ -1,7 +1,11 @@
+---
+statistics: True
+---
+
 <h1 align="center">Fucking Code</h1>
 
 <p align="center">
-Everything about the fucking code
+Everything about the fucking code!
 </p>
 
 <p align="center">
@@ -28,5 +32,13 @@ Everything about the fucking code
 
 ## 更多
 
+!!! note inline end "本站统计"
+    * 总页面：{{ pages }}
+    * 总字（词）数：{{ words }}
+    * 总代码行数：{{ codes }}
+
 - 关于: [About.md](./About.md)
-- 项目许可证: [LICENSE.txt](./LICENSE.md)
+- 贡献指南: [Contributing.md](./Contributing.md)
+- 更新日志: [ChangeLog.md](./ChangeLog.md)
+- 项目许可证: [LICENSE.md](./LICENSE.md)
+- 仓库链接: [Fucking Code](https://github.com/Xiaokang2022/Fucking-Code/)

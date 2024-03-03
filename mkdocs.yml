@@ -110,32 +110,28 @@ theme: # 主题设置
     - toc.follow # 锚点关注，侧边栏自动滚动，使锚点总是可见
     # - toc.integrate # 右边侧栏是否集成到左侧边栏
   palette:
-    # Palette toggle for automatic mode
+    # 系统主题
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/brightness-auto
         name: 切换至亮色主题
-
-    # Palette toggle for light mode
+    # 亮色主题
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: white # 明亮标题栏颜色
+      # primary: grey # 明亮标题栏颜色
       accent: pink # 明亮链接高亮颜色
       toggle:
         icon: material/brightness-7
         name: 切换至暗色主题
-
-    # Palette toggle for dark mode
+    # 暗色主题
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black # 黑暗标题栏颜色
-      accent: yellow # 黑暗链接高亮颜色
+      # accent: yellow # 黑暗链接高亮颜色
       toggle:
         icon: material/brightness-4
         name: 切换至系统主题
-  font: # 字体
-    text: Microsoft YaHei # 文本
-    code: consolas # 代码
+  font: false # 避免从谷歌加载字体导致网页加载变慢
   logo: images/logo.png # 页面左上角徽标
   favicon: images/logo.png # 网页的图标
   icon:
@@ -163,10 +159,17 @@ extra: # 额外设定
       link: /Fucking-Code/404.html
       lang: en
 
-extra_javascript: # 保证数学表达式能正确显示的运行时环境
-  - javascripts/mathjax.js
+extra_javascript:
+  - javascripts/mathjax.js # 保证数学表达式能正确显示的运行时环境
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - css/extra.css
+  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css
+  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css # 自定义字体（霞鹜文楷）
 
 plugins: # 插件
   - offline:
@@ -182,8 +185,11 @@ plugins: # 插件
       type: datetime # 每页底下显示最后更新日期（除开 index）
       locale: zh # 换成中文显示
   - git-authors # 需 pip install mkdocs-git-authors-plugin
+  - changelog # 需 pip install mkdocs-changelog-plugin
   - glightbox # 图像缩放，需 pip install mkdocs-glightbox
-  - statistics # 统计信息，需 pip install mkdocs-statistics-plugin
+  - statistics: # 统计信息，需 pip install mkdocs-statistics-plugin
+      codelines_per_minute: 10 # 每分钟可看的代码行数
+      words_per_minute: 100 # 每分钟可看的文本数
 
 watch:
   - docs/
@@ -194,6 +200,8 @@ nav: # 导航栏
   - 主页:
       - 开始: index.md
       - 关于: About.md
+      - 贡献指南: Contributing.md
+      - 更新日志: ChangeLog.md
       - 项目许可证: LICENSE.md
 
   - 数据结构:
@@ -220,6 +228,7 @@ nav: # 导航栏
           - pdq_sort: Algorithms/sort/pdq_sort.md
       - 查找（搜索）:
           - 顺序查找: Algorithms/search/seq_search.md
+          - 分块查找（改进的顺序查找）: Algorithms/search/block_search.md
           - 二分查找: Algorithms/search/binary_search.md
           - 散列查找: Algorithms/search/hash_search.md
       # - 预处理:
