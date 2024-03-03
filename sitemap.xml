@@ -11,12 +11,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://Xiaokang2022.github.io/Fucking-Code/ChangeLog/</loc>
+         <lastmod>2024-03-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Xiaokang2022.github.io/Fucking-Code/Contributing/</loc>
+         <lastmod>2024-03-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://Xiaokang2022.github.io/Fucking-Code/LICENSE/</loc>
          <lastmod>2024-03-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Xiaokang2022.github.io/Fucking-Code/Algorithms/search/binary_search/</loc>
+         <lastmod>2024-03-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Xiaokang2022.github.io/Fucking-Code/Algorithms/search/block_search/</loc>
          <lastmod>2024-03-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
