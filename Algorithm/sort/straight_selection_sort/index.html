@@ -263,8 +263,10 @@
         var busuanziSiteOffset = parseInt(-6427684);
         function fixCount() {
             if ($("#busuanzi_container_site_pv").css("display") != "none") {
-                clearInterval(int);
-                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + busuanziSiteOffset);
+                if (parseInt($("#busuanzi_value_site_pv").html()) > 6427000) {
+                    clearInterval(int);
+                    $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + busuanziSiteOffset);
+                }
             }
         }
     });
