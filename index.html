@@ -263,12 +263,12 @@
 <script>
     $(document).ready(function () {
         var int = setInterval(fixCount, 100);
-        var busuanziSiteOffset = parseInt(-6427684);
+        var busuanziSiteOffset = parseInt(6427684);  // 需要减去的初始数值
         function fixCount() {
             if ($("#busuanzi_container_site_pv").css("display") != "none") {
-                if (parseInt($("#busuanzi_value_site_pv").html()) > 6427000) {
+                if (parseInt($("#busuanzi_value_site_pv").html()) >= busuanziSiteOffset) {
                     clearInterval(int);
-                    $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + busuanziSiteOffset);
+                    $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) - busuanziSiteOffset);
                 }
             }
         }
@@ -312,7 +312,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="Data%20Structure/Hello%20World/" class="md-tabs__link">
+        <a href="Data%20Structure/" class="md-tabs__link">
           
   
   数据结构
@@ -329,23 +329,14 @@
   
     
     
-      
-  
-  
-  
-    
-    
       <li class="md-tabs__item">
-        <a href="Algorithm/sort/straight_insertion_sort/" class="md-tabs__link">
+        <a href="Algorithm/" class="md-tabs__link">
           
   
   算法
 
         </a>
       </li>
-    
-  
-
     
   
 
@@ -357,7 +348,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="Numerical%20Calculation/Hello%20World/" class="md-tabs__link">
+        <a href="Numerical%20Calculation/" class="md-tabs__link">
           
   
   数值计算
@@ -375,7 +366,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="Design%20Pattern/Hello%20World/" class="md-tabs__link">
+        <a href="Design%20Pattern/" class="md-tabs__link">
           
   
   设计模式
@@ -393,7 +384,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="C/Hello%20World/" class="md-tabs__link">
+        <a href="C/" class="md-tabs__link">
           
   
   C
@@ -411,7 +402,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="C%2B%2B/Hello%20World/" class="md-tabs__link">
+        <a href="C%2B%2B/" class="md-tabs__link">
           
   
   C++
@@ -429,7 +420,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="Python/Hello%20World/" class="md-tabs__link">
+        <a href="Python/" class="md-tabs__link">
           
   
   Python
@@ -447,7 +438,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="Java/Hello%20World/" class="md-tabs__link">
+        <a href="Java/" class="md-tabs__link">
           
   
   Java
@@ -465,7 +456,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="C%23/Hello%20World/" class="md-tabs__link">
+        <a href="C%23/" class="md-tabs__link">
           
   
   C#
@@ -483,7 +474,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="TypeScript/Hello%20World/" class="md-tabs__link">
+        <a href="TypeScript/" class="md-tabs__link">
           
   
   TypeScript
@@ -501,10 +492,10 @@
     
     
       <li class="md-tabs__item">
-        <a href="Other/Hello%20World/" class="md-tabs__link">
+        <a href="Database/" class="md-tabs__link">
           
   
-  其它
+  数据库
 
         </a>
       </li>
@@ -804,7 +795,7 @@
         
   
   
-    <a href="Data%20Structure/Hello%20World/" class="md-nav__link">
+    <a href="Data%20Structure/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -846,10 +837,7 @@
         
   
   
-    
-  
-  
-    <a href="Algorithm/sort/straight_insertion_sort/" class="md-nav__link">
+    <a href="Algorithm/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -861,8 +849,6 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
-  
-
   
 
       
@@ -893,7 +879,7 @@
         
   
   
-    <a href="Numerical%20Calculation/Hello%20World/" class="md-nav__link">
+    <a href="Numerical%20Calculation/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -935,7 +921,7 @@
         
   
   
-    <a href="Design%20Pattern/Hello%20World/" class="md-nav__link">
+    <a href="Design%20Pattern/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -977,7 +963,7 @@
         
   
   
-    <a href="C/Hello%20World/" class="md-nav__link">
+    <a href="C/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1019,7 +1005,7 @@
         
   
   
-    <a href="C%2B%2B/Hello%20World/" class="md-nav__link">
+    <a href="C%2B%2B/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1061,7 +1047,7 @@
         
   
   
-    <a href="Python/Hello%20World/" class="md-nav__link">
+    <a href="Python/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1103,7 +1089,7 @@
         
   
   
-    <a href="Java/Hello%20World/" class="md-nav__link">
+    <a href="Java/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1145,7 +1131,7 @@
         
   
   
-    <a href="C%23/Hello%20World/" class="md-nav__link">
+    <a href="C%23/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1187,7 +1173,7 @@
         
   
   
-    <a href="TypeScript/Hello%20World/" class="md-nav__link">
+    <a href="TypeScript/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1229,11 +1215,11 @@
         
   
   
-    <a href="Other/Hello%20World/" class="md-nav__link">
+    <a href="Database/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    其它
+    数据库
   </span>
   
 
@@ -1349,7 +1335,7 @@ Everything about the fucking code!
 <div class="admonition info inline end">
 <p class="admonition-title">本站统计</p>
 <ul>
-<li>总页面：37</li>
+<li>总页面：38</li>
 <li>总字（词）数：2390</li>
 <li>总代码行数：31</li>
 <li>总访问量：<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></li>
