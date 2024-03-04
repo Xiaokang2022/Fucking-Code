@@ -165,7 +165,7 @@ extra_javascript:
 
 extra_css:
   - extra/css/extra.css
-  - https://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css
+  - https://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css # 访问统计转圈加载样式
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css
@@ -188,8 +188,8 @@ plugins: # 插件
   - changelog # 需 pip install mkdocs-changelog-plugin
   - glightbox # 图像缩放，需 pip install mkdocs-glightbox
   - statistics: # 统计信息，需 pip install mkdocs-statistics-plugin
-      codelines_per_minute: 10 # 每分钟可看的代码行数
-      words_per_minute: 100 # 每分钟可看的文本数
+      codelines_per_minute: 15 # 每分钟可看的代码行数
+      words_per_minute: 150 # 每分钟可看的文本数
 
 watch:
   - docs/
