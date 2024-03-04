@@ -206,9 +206,10 @@ nav: # 导航栏
       - 建议区: Suggest.md
 
   - 数据结构:
-      - Data Structure/Hello World.md
+      - 数据结构简介: Data Structure/index.md
 
   - 算法:
+      - 算法简介: Algorithm/index.md
       - 排序:
           - 直接插入排序: Algorithm/sort/straight_insertion_sort.md
           - 二分插入排序: Algorithm/sort/binary_insertion_sort.md
@@ -240,20 +241,20 @@ nav: # 导航栏
       #     - 输出:
 
   - 数值计算:
-      - Numerical Calculation/Hello World.md
+      - 数值计算简介: Numerical Calculation/index.md
   - 设计模式:
-      - Design Pattern/Hello World.md
+      - 设计模式简介: Design Pattern/index.md
   - C:
-      - C/Hello World.md
+      - C 简介: C/index.md
   - C++:
-      - C++/Hello World.md
+      - C++ 简介: C++/index.md
   - Python:
-      - Python/Hello World.md
+      - Python 简介: Python/index.md
   - Java:
-      - Java/Hello World.md
+      - Java 简介: Java/index.md
   - C#:
-      - C#/Hello World.md
+      - C# 简介: C#/index.md
   - TypeScript:
-      - TypeScript/Hello World.md
-  - 其它:
-      - Other/Hello World.md
+      - TypeScript 简介: TypeScript/index.md
+  - 数据库:
+      - 数据库简介: Database/index.md
