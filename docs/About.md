@@ -6,7 +6,12 @@
 - [material for mkdocs](https://github.com/squidfunk/mkdocs-material)
 - 评论系统的提供者：[giscus](https://giscus.app/zh-CN)
 - 开源字体：[霞鹜文楷](https://github.com/lxgw/LxgwWenKai)
+- [不蒜子](https://busuanzi.ibruce.info/)访问统计
 - 网站样式[参考项目](https://github.com/TonyCrane/note/)：https://note.tonycrane.cc/
-- 插件 changelog 的作者：[TonyCrane](https://github.com/TonyCrane)
-- 插件 statistics 的作者：TonyCrane（与上面的是同一个人）
-- 以及其它非常有用的插件作者！❤️
+- 插件 [changelog](https://github.com/TonyCrane/mkdocs-changelog-plugin) 的作者：[TonyCrane](https://github.com/TonyCrane)
+- 插件 [statistics](https://github.com/TonyCrane/mkdocs-statistics-plugin) 的作者：TonyCrane（与上面的是同一个人）
+- 插件 [glightbox](https://github.com/Blueswen/mkdocs-glightbox)
+- 插件 [minify](https://github.com/byrnereese/mkdocs-minify-plugin)
+- 插件 [git-authors](https://github.com/timvink/mkdocs-git-authors-plugin)
+- 插件 [git-revision-date-localized](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin)
+- 以及其它可能有帮助的项目！:heart:{ .heart }

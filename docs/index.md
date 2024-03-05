@@ -33,6 +33,7 @@ Everything about the fucking code!
 ## 更多
 
 !!! info inline end "本站统计"
+
     - 总页面：{{ pages }}
     - 总字（词）数：{{ words }}
     - 总代码行数：{{ codes }}

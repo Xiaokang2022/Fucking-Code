@@ -1,19 +1,16 @@
 body {
     /* font-family: "LXGW WenKai", sans-serif; */
-    /* Lite version */
     /* font-family: "LXGW WenKai Lite", sans-serif; */
-    /* TC version */
     /* font-family: "LXGW WenKai TC", sans-serif; */
-    /* Screen version */
-    font-family: "LXGW WenKai Screen", sans-serif;
+    font-family: "LXGW WenKai Screen", sans-serif;  /* 自定义字体为：LXGW WenKai Screen，可选四种不同的 */
 }
 
 :root {
-    --md-text-font: "LXGW WenKai Screen";
-    --md-code-font: "Consolas";
+    --md-text-font: "LXGW WenKai Screen";  /*文本字体*/
+    --md-code-font: "Consolas";  /*代码字体*/
 }
 
-[data-md-color-scheme="default"] {
+[data-md-color-scheme="default"] {  /*亮色样式*/
     --md-default-fg-color: #333;
     --md-default-fg-color--light: #333;
     --md-primary-fg-color: #efefef;
@@ -26,7 +23,7 @@ body {
     --md-footer-fg-color--lighter: #222;
 }
 
-[data-md-color-scheme="slate"] {
+[data-md-color-scheme="slate"] {  /*暗色样式*/
     --md-default-fg-color: #bbb;
     --md-default-fg-color--light: #bbb;
     --md-accent-fg-color: #cccc00;
@@ -35,4 +32,21 @@ body {
     --md-footer-bg-color--dark: #0d0d0d;
     --md-footer-fg-color--light: #ccc;
     --md-footer-fg-color--lighter: #ccc;
+}
+
+@keyframes heart {  /* 心脏跳动的样式表 */
+    0%,
+    40%,
+    80%,
+    100% {
+        transform: scale(1);
+    }
+    20%,
+    60% {
+        transform: scale(1.15);
+    }
+}
+
+.heart {
+    animation: heart 1000ms infinite;
 }
