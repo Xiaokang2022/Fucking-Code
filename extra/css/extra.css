@@ -1,9 +1,16 @@
-:root {
-    --md-text-font: "LXGW WenKai Screen";  /*文本字体*/
-    --md-code-font: "Consolas";  /*代码字体*/
+body {
+    font-family: "LXGW WenKai Screen", sans-serif;
 }
 
-[data-md-color-scheme="default"] {  /*亮色样式（配置了好久，但每个具体干啥的我也说不清，一个一个试就行）*/
+:root {
+    --md-text-font: "LXGW WenKai Screen";
+    /*文本字体*/
+    --md-code-font: "Consolas";
+    /*代码字体*/
+}
+
+[data-md-color-scheme="default"] {
+    /*亮色样式（配置了好久，但每个具体干啥的我也说不清，一个一个试就行）*/
     --md-default-fg-color: #333;
     --md-default-fg-color--light: #333;
     --md-primary-fg-color: #efefef;
@@ -16,7 +23,8 @@
     --md-footer-fg-color--lighter: #222;
 }
 
-[data-md-color-scheme="slate"] {  /*暗色样式*/
+[data-md-color-scheme="slate"] {
+    /*暗色样式*/
     --md-default-fg-color: #bbb;
     --md-default-fg-color--light: #bbb;
     --md-accent-fg-color: #cccc00;
@@ -29,13 +37,15 @@
 
 /* 下面两个是心脏跳动动画的样式表（抄官网的代码），在双冒号表情后面加 { .heart } 即可生效*/
 
-@keyframes heart {  
+@keyframes heart {
+
     0%,
     40%,
     80%,
     100% {
         transform: scale(1);
     }
+
     20%,
     60% {
         transform: scale(1.15);
