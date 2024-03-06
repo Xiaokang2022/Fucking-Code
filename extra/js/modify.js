@@ -1,3 +1,5 @@
+// 这代码是抄网上的，具体哪里搞不清楚了
+
 $(document).ready(function () {
     var int = setInterval(fixCount, 100);
     var busuanziSiteOffset = parseInt(6427684);  // 6427684 是需要减去的初始数值，每个人的不一样，自测一下便知
