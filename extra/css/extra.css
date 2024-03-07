@@ -51,8 +51,6 @@
     animation: heart 1000ms infinite;
 }
 
-/*下面是 changelog 插件的自定义样式表*/
-
 .changelog-type-Added {
     background-color: #599959;
 }

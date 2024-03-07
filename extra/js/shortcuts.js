@@ -1,5 +1,3 @@
-// Author: Xiaokang2022
-
 keyboard$.subscribe(function (key) {  // 键盘左键上一页
     if (key.mode === "global" && key.type === "ArrowLeft") {
         /* Add custom keyboard handler here */
