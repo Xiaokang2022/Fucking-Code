@@ -243,6 +243,7 @@ plugins: # 插件
 watch: # serve 实时预览模式下检测更改的目录或文件
   - docs/
   - sources/
+  - pythontutor/
   - mkdocs.yml
 
 nav: # 导航栏

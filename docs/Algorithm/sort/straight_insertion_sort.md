@@ -8,17 +8,17 @@ comments: true
 
 ### 1.1 步骤
 
-- [ ] 将整个数组分组两部分，左边和右边部分；
-- [ ] 在排序的过程中，无需管右边部分的顺序，只需要保证左边始终有序；
-- [ ] 遍历从左到右，每遍历到一个新的元素，都将其取出(1)；
-    { .annotate}
+-   [ ] 将整个数组分组两部分，左边和右边部分；
+-   [ ] 在排序的过程中，无需管右边部分的顺序，只需要保证左边始终有序；
+-   [ ] 遍历从左到右，每遍历到一个新的元素，都将其取出(1)；
+        { .annotate}
 
     1.  因为无法马上确定其位置
 
-- [ ] 然后在保证顺序的左边部分中寻找其应该的位置；
-- [ ] 即，从该元素位置向左遍历，并判断是否应该插入；
-- [ ] 如不能插入，则将判断的元素向右移位，反之插入；
-- [ ] 如此反复直至遍历完成，那么整个数组都是有序的了。
+-   [ ] 然后在保证顺序的左边部分中寻找其应该的位置；
+-   [ ] 即，从该元素位置向左遍历，并判断是否应该插入；
+-   [ ] 如不能插入，则将判断的元素向右移位，反之插入；
+-   [ ] 如此反复直至遍历完成，那么整个数组都是有序的了。
 
 ### 1.2 流程图
 
@@ -55,7 +55,10 @@ flowchart TB
 
 ### 2.1 多语言版本
 
-推荐学习 C++ 版本，更利于理解算法的本质。另外，下面 Python 的实现方式与其它三个略微有些不同，请注意。
+推荐学习 C++ 版本，更利于理解算法的本质。另外，下面 Python 的实现方式与其它三个略微有些不同，请注意。此外，Python 示例代码给的是 Python 3.12(1) 的，但是“可视化代码”使用的 Python 只能支持 Python 3.11，同理，TypeScript 的可视化代码是 JavaScript。
+{ .annotate }
+
+1. Python 3.12 的泛型语法更为简洁！
 
 === "🟣 C 17"
 
@@ -64,7 +67,9 @@ flowchart TB
     ```
 
     1. 相等时，被比较元素原来在前面的就不用右移了，保证稳定性
-    
+
+    --8<-- "pythontutor/Algorithm/sort/C/straight_insertion_sort.md"
+
 === "🔴 C++ 20"
 
     ```cpp
@@ -72,7 +77,9 @@ flowchart TB
     ```
 
     1. 相等时，被比较元素原来在前面的就不用右移了，保证稳定性
-    
+
+    --8<-- "pythontutor/Algorithm/sort/C++/straight_insertion_sort.md"
+
 === "🔵 Python 3"
 
     ```python
@@ -81,8 +88,10 @@ flowchart TB
 
     1. 相等时，不确定位置的元素的位置也能确定了，一定在当前被比较元素的右边
 
+    --8<-- "pythontutor/Algorithm/sort/Python/straight_insertion_sort.md"
+
     !!! Tip "提示"
-    
+
         若要实现 C/C++ 那样，通过参数 n 只排序前几个元素的话，可采用对列表切片引用的方式传参，可达到相同效果。
 
 === "🟠 Java 21"
@@ -92,6 +101,8 @@ flowchart TB
     ```
 
     1. 相等时，被比较元素原来在前面的就不用右移了，保证稳定性
+
+    --8<-- "pythontutor/Algorithm/sort/Java/straight_insertion_sort.md"
 
     !!! Tip "提示"
 
@@ -105,6 +116,8 @@ flowchart TB
 
     1. 相等时，被比较元素原来在前面的就不用右移了，保证稳定性
 
+    --8<-- "pythontutor/Algorithm/sort/C#/straight_insertion_sort.md"
+
     !!! Tip "提示"
 
         若要实现 C/C++ 那样，通过参数 n 只排序前几个元素的话，可采用数组切片的方式传参，可达到相同效果。
@@ -117,20 +130,22 @@ flowchart TB
 
     1. 相等时，被比较元素原来在前面的就不用右移了，保证稳定性
 
+    --8<-- "pythontutor/Algorithm/sort/TypeScript/straight_insertion_sort.md"
+
     !!! Tip "提示"
 
         若要实现 C/C++ 那样，通过参数 n 只排序前几个元素的话，可采用 slice 方法对数组切片的方式传参，可达到相同效果。
 
 ### 2.2 测试用例
 
-=== "🔻输入数据"
-    
+=== "🔻 输入数据"
+
     ```text
     9
     6 28 13 72 85 39 41 6 20
     ```
 
-=== "🔺输出数据"
+=== "🔺 输出数据"
 
     ```text
     6 6 13 20 28 39 41 72 85
@@ -140,10 +155,10 @@ flowchart TB
 
 ### 3.1 时空复杂度
 
-|   复杂度   |         😀最好情况          |          😭最坏情况           | 🫤平均情况 |
-| :--------: | :------------------------: | :--------------------------: | :-------: |
-| 时间复杂度 | $O(n)${ title="数组顺序" } | $O(n^2)${ title="数组逆序" } | $O(n^2)$  |
-| 空间复杂度 |           $O(1)$           |            $O(1)$            |  $O(1)$   |
+|   复杂度   |        😀 最好情况         |         😭 最坏情况          | 🫤 平均情况 |
+| :--------: | :------------------------: | :--------------------------: | :--------: |
+| 时间复杂度 | $O(n)${ title="数组顺序" } | $O(n^2)${ title="数组逆序" } |  $O(n^2)$  |
+| 空间复杂度 |           $O(1)$           |            $O(1)$            |   $O(1)$   |
 
 1. 测试
 
@@ -202,12 +217,12 @@ $$
 
 ### 4.1 编程题
 
-- [ ] [洛谷 - P7910 [CSP-J 2021]](https://www.luogu.com.cn/problem/P7910)
-- [ ] [力扣 - 147](https://leetcode.cn/problems/insertion-sort-list/description/)
-- [ ] [力扣 - 面试题 05.01](https://leetcode.cn/problems/insert-into-bits-lcci/description/)
+-   [ ] [洛谷 - P7910 [CSP-J 2021]](https://www.luogu.com.cn/problem/P7910)
+-   [ ] [力扣 - 147](https://leetcode.cn/problems/insertion-sort-list/description/)
+-   [ ] [力扣 - 面试题 05.01](https://leetcode.cn/problems/insert-into-bits-lcci/description/)
 
 ### 4.2 选择题
 
-- [ ] [牛客 - 试题广场](https://www.nowcoder.com/questionTerminal/4ee287d1d96a4aea9fc83d29e7ce9695?)
+-   [ ] [牛客 - 试题广场](https://www.nowcoder.com/questionTerminal/4ee287d1d96a4aea9fc83d29e7ce9695?)
 
 [^1]: [直接插入排序 · 百度百科](https://baike.baidu.com/item/%E7%9B%B4%E6%8E%A5%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/8255911)
