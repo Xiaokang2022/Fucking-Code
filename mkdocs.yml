@@ -310,10 +310,10 @@ nav: # 导航栏
   - C#:
       - C# 简介: C#/index.md
   - TypeScript:
-      - TypeScript 简介: TypeScript/index.md
+      - TypeScript 简介: TypeScript_/index.md
   - HTML:
-      - HTML 简介: HTML/index.md
+      - HTML 简介: HTML_/index.md
   - CSS:
-      - CSS 简介: CSS/index.md
+      - CSS 简介: CSS_/index.md
   - Markdown:
       - Markdown 简介: Markdown/index.md
