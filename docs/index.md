@@ -30,8 +30,6 @@ Everything about the fucking code!
     </a>
 </p>
 
-## 更多
-
 !!! info inline end "本站统计"
 
     - 总页面：{{ pages }}
@@ -39,8 +37,9 @@ Everything about the fucking code!
     - 总代码行数：{{ codes }}
     - 总访问量：<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>
 
--   关于: [About.md](./About.md)
+-   使用指南: [Guide.md](./Guide.md)
+-   关于本站: [About.md](./About.md)
 -   贡献指南: [Contributing.md](./Contributing.md)
 -   更新日志: [ChangeLog.md](./ChangeLog.md)
--   项目许可证: [LICENSE.md](./LICENSE.md)
 -   建议区: [Suggest.md](./Suggest.md)
+-   项目许可证: [LICENSE.md](./LICENSE.md)

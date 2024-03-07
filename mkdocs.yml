@@ -250,11 +250,12 @@ watch: # serve 实时预览模式下检测更改的目录或文件
 nav: # 导航栏
   - 主页:
       - 开始: index.md
-      - 关于: About.md
+      - 使用指南: Guide.md
       - 贡献指南: Contributing.md
+      - 关于本站: About.md
       - 更新日志: ChangeLog.md
-      - 项目许可证: LICENSE.md
       - 建议区: Suggest.md
+      - 项目许可证: LICENSE.md
 
   - 数据结构:
       - 数据结构简介: Data Structure/index.md
@@ -280,7 +281,7 @@ nav: # 导航栏
           - 桶排序: Algorithm/sort/bucket_sort.md
           - tim_sort: Algorithm/sort/tim_sort.md
           - pdq_sort: Algorithm/sort/pdq_sort.md
-      - 查找（搜索）:
+      - 查找:
           - 查找简介: Algorithm/search/index.md
           - 顺序查找: Algorithm/search/seq_search.md
           - 分块查找（改进的顺序查找）: Algorithm/search/block_search.md
