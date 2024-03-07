@@ -1,16 +1,19 @@
 # 此 mkdocs.yml 由 Xiaokang2022 编写
 
-site_url: https://Xiaokang2022.github.io/Fucking-Code/ # 站点链接
 site_name: Fucking Code # 站点名称
-site_author: 小康2022 # 站点作者
-site_description: Everything about the fucking code. # 站点描述
-edit_uri: edit/main/docs/ # 编辑地址（页面会出现编辑按钮）
+site_url: https://Xiaokang2022.github.io/Fucking-Code/ # 站点链接
 repo_url: https://github.com/Xiaokang2022/Fucking-Code/ # 仓库地址
 repo_name: Xiaokang2022/Fucking-Code # 仓库名称
+edit_uri: edit/main/docs/ # 编辑地址（页面会出现编辑按钮）
+site_description: Everything about the fucking code. # 站点描述
+site_author: Xiaokang2022 # 站点作者
 copyright: Copyright &copy; 2024 小康2022 # 版权信息（会出现在左下角）
-remote_branch: gh-pages # GitHub Pages 分支名称（此处为默认值）
-
-strict: false # 严格模式，不太懂
+remote_branch: gh-pages # GitHub Pages 分支名称（默认值）
+remote_name: origin # 远程分支的名称（默认值）
+docs_dir: docs # 文档目录（默认值）
+site_dir: site # 网站目录（默认值）
+strict: false # 严格模式，不太懂（默认值）
+dev_addr: 127.0.0.1:8000 # 开发模式下的 IP 地址（默认值）
 
 markdown_extensions:
   # === 从这里开始到下面，是 pymdown-extensions 库的 markdown_extensions 配置 ===
