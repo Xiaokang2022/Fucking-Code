@@ -16,8 +16,8 @@ markdown_extensions:
   # === 从这里开始到下面，是 pymdown-extensions 库的 markdown_extensions 配置 ===
   # 需求：pip install pymdown-extensions （不过一般应该都装了）
 
-  - pymdownx.mark # 允许文本下划线，即 ^^Text^^
   - pymdownx.keys # 按键高亮，类似于行内代码那种，如 <kbd>Ctrl</kbd>，或者带图标的格式（强制小写）++ctrl++，也可组合 ++ctrl+s++（推荐第二种方式，第二种自带图标）
+  - pymdownx.mark # 允许文本下划线，即 ^^Text^^
   - pymdownx.caret # 允许文本高亮，即 ==Text==
   - pymdownx.tilde # 允许文本删除线，即 ~~Text~~
   - pymdownx.details # 允许提示框与文本左右布局，而非原来的上下布局，如 !!! note inline "Hint"（左），!!! note inline end（右）
@@ -49,11 +49,11 @@ markdown_extensions:
       mode: view # 批注模式，可为 view，accept 和 reject，不懂干啥的
 
   - pymdownx.highlight: # 允许代码块语法高亮
+      use_pygments: true # 使用 pygments 而不是 javascript，啥意思不懂
       linenums: true # 全部显示行号，若为 false，也可指定起始行号，如 ```python linenums="2"，也可指定高亮行，如 hl_lines="2-3"
       linenums_style: pymdownx-inline # 行号样式 pymdownx-inline 或者 inline 和 table（最好不要使用其它的值，会有 bug，如代码复制按钮错位）
-      line_spans: __span # 这对于行突出显示等功能正常工作至关重要，不懂
-      use_pygments: true # 使用 pygments 而不是 javascript，啥意思不懂
       anchor_linenums: true # 用锚链接包装代码行号，便于超链接和共享（就是行号可以像锚点一样被点击）
+      line_spans: __span # 这对于行突出显示等功能正常工作至关重要，不懂
       pygments_lang_class: true # 对于自定义注释标记的功能至关重要，不懂
       # auto_title: true # 自动为所有代码块添加一个标题
 
@@ -111,31 +111,31 @@ markdown_extensions:
 
 theme: # 主题设置
   name: material # 第三方主题名称
-  language: zh # material 语言
   custom_dir: docs/overrides # 覆盖部分原来的主题（重载目录）
+  language: zh # material 语言
   features:
     # - header.autohide # 顶栏自动隐藏
-    - announce.dismiss # 公告栏可以被关闭
     - content.tooltips # 提示框（以前有的样式变好看了，此外还支持更高级的提示框语法）
     - content.code.copy # 例如：``` python { .yaml .copy } 默认开启，{ .yaml .no-copy } 关闭
-    - content.tabs.link # 同样的标签，整个网站的同步切换，如 C -> C++，则其它类似的全部标签都同步切换
-    - content.action.view # 允许查看页面的源代码（会出现查看源代码按钮）
-    - content.action.edit # 允许页面被编辑（会出现编辑按钮）
     - content.code.annotate # 允许内联代码注释
+    - content.tabs.link # 同样的标签，整个网站的同步切换，如 C -> C++，则其它类似的全部标签都同步切换
+    - content.action.edit # 允许页面被编辑（会出现编辑按钮）
+    - content.action.view # 允许查看页面的源代码（会出现查看源代码按钮）
+    - announce.dismiss # 公告栏可以被关闭
     # - navigation.expand # 左侧边栏节点默认全部展开（与 navigation.prune 不兼容）
-    - navigation.indexes # 左侧边栏大节点是否可以被导向到 index.md
+    - navigation.tabs # 页面顶部导航栏
+    - navigation.prune # 左侧栏节点至多展开一个，以此来减小站点的构建大小（对于页数100+的网站很有用，但是！与 navigation.expand 不兼容）
     - navigation.footer # 页面底下换页的支持
+    - navigation.indexes # 左侧边栏大节点是否可以被导向到 index.md
     - navigation.instant # 页面不会重复加载（已加载页面不会再次加载）
     - navigation.instant.progress # 加载速度慢时，在页面顶部显示加载进度（400ms 以上加载时间才会显示它）
-    - navigation.prune # 左侧栏节点至多展开一个，以此来减小站点的构建大小（对于页数100+的网站很有用，但是！与 navigation.expand 不兼容）
-    - navigation.tabs # 页面顶部导航栏
     # - navigation.tabs.sticky # 导航栏标题栏位置固定
     # - navigation.sections # 左侧边栏节点是否保持展开
     - navigation.top # 回到顶部的按钮
     - navigation.tracking # 锚点跟踪
-    - search.highlight # 搜索栏内容高亮
     - search.share # 搜索栏分享按钮
     - search.suggest # 搜索栏内容建议
+    - search.highlight # 搜索栏内容高亮
     - toc.follow # 锚点关注，侧边栏自动滚动，使锚点总是可见
     # - toc.integrate # 右边侧栏是否集成到左侧边栏
   palette: # 界面整体样式
@@ -196,7 +196,7 @@ extra_javascript: # 额外 JS
 extra_css: # 额外 CSS
   - extra/css/extra.css # 加载自定义的样式
   - https://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css # 访问统计转圈加载样式
-  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css # 自定义字体（霞鹜文楷），在 extra/css/extra.css 中指定
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css # 自定义字体（霞鹜文楷）
 
 plugins: # 插件
   - search: # 搜索插件（内置）
@@ -228,6 +228,7 @@ plugins: # 插件
       caption_position: bottom # 标题位置 (bottom, top, left, right)
       background: none # 背景颜色
       shadow: true # 启用或禁用图像阴影
+  - changelog # 日志插件（pip install mkdocs-changelog-plugin）
   - statistics: # 数据统计插件（pip install mkdocs-statistics-plugin）
       codelines_per_minute: 15 # 每分钟可看的代码行数
       words_per_minute: 150 # 每分钟可看的文本数
@@ -238,7 +239,6 @@ plugins: # 插件
       htmlmin_opts:
         remove_comments: true
       cache_safe: true
-  - changelog # 日志插件（pip install mkdocs-changelog-plugin）
 
 watch: # serve 实时预览模式下检测更改的目录或文件
   - docs/
