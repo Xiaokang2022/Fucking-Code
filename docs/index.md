@@ -5,6 +5,8 @@ statistics: True
 <h1 align="center">Fucking Code</h1>
 
 <p align="center">
+关于可恶代码的一切！
+<br/>
 Everything about the fucking code!
 </p>
 
