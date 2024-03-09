@@ -147,7 +147,7 @@ theme: # 主题设置
     - media: "(prefers-color-scheme: light)" # 亮色主题
       scheme: default
       # primary: grey # 标题栏颜色（建议自定义 CSS 调整，因为 footer 不会被此参数影响！）
-      accent: pink # 链接高亮颜色
+      accent: purple # 链接高亮颜色
       toggle:
         icon: material/weather-sunny
         name: 切换至暗黑主题
@@ -204,18 +204,18 @@ plugins: # 插件
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])' # 分隔符，我也不懂，我从官方那里找来的
       lang: # 支持的语言
         - zh # 中文
-  - git-revision-date-localized: # 文章日期显示插件（pip install mkdocs-git-revision-date-localized-plugin）注意：build 时此插件加载非常缓慢！
-      enable_creation_date: true # 显示创建的日期
-      type: datetime # 每页底下显示最后更新日期，类型是 datatime（日期+时间），或者 data（只有日期）等
-      locale: zh # 换成中文显示
-  - git-authors: # 文章作者显示插件（pip install mkdocs-git-authors-plugin）注意：build 时此插件加载非常缓慢！
-      show_contribution: true # 显示贡献比例
-      show_line_count: true # 记录行数
-      show_email_address: true # 显示邮箱
-      count_empty_lines: false # 记录空行的贡献
-      fallback_to_empty: false # 不懂
-      sort_authors_by: contribution # 贡献者名单排序方式 (name, contribution)
-      authorship_threshold_percent: 0 # 筛选掉贡献比例低于该百分比的贡献者
+  # - git-revision-date-localized: # 文章日期显示插件（pip install mkdocs-git-revision-date-localized-plugin）注意：build 时此插件加载非常缓慢！
+  #     enable_creation_date: true # 显示创建的日期
+  #     type: datetime # 每页底下显示最后更新日期，类型是 datatime（日期+时间），或者 data（只有日期）等
+  #     locale: zh # 换成中文显示
+  # - git-authors: # 文章作者显示插件（pip install mkdocs-git-authors-plugin）注意：build 时此插件加载非常缓慢！
+  #     show_contribution: true # 显示贡献比例
+  #     show_line_count: true # 记录行数
+  #     show_email_address: true # 显示邮箱
+  #     count_empty_lines: false # 记录空行的贡献
+  #     fallback_to_empty: false # 不懂
+  #     sort_authors_by: contribution # 贡献者名单排序方式 (name, contribution)
+  #     authorship_threshold_percent: 0 # 筛选掉贡献比例低于该百分比的贡献者
   - glightbox: # 图像缩放插件（pip install mkdocs-glightbox）
       touchNavigation: true # 启用或禁用触摸导航（轻扫），应该是便于手机用户吧
       loop: false # 换图时循环
@@ -251,11 +251,11 @@ nav: # 导航栏
   - 主页:
       - 开始: index.md
       - 使用指南: Guide.md
-      - 贡献指南: Contributing.md
       - 关于本站: About.md
+      - 贡献指南: Contributing.md
       - 更新日志: ChangeLog.md
-      - 建议区: Suggest.md
       - 项目许可证: LICENSE.md
+      - 建议区: Suggest.md
 
   - 数据结构:
       - 数据结构简介: Data Structure/index.md
@@ -306,6 +306,7 @@ nav: # 导航栏
       - C++ 简介: C++/index.md
   - Python:
       - Python 简介: Python/index.md
+      - 搭建开发环境: Python/01.md
   - Java:
       - Java 简介: Java/index.md
   - C#:
