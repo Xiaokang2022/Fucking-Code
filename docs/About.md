@@ -13,6 +13,7 @@
 -   星数增长图：[Star History](https://star-history.com/)
 -   项目更改表格：[Repobeats](https://repobeats.axiom.co/)
 -   网站样式参考：https://note.tonycrane.cc/
+-   算法代码参考：[Hello 算法](https://www.hello-algo.com/)
 -   插件 [changelog](https://github.com/TonyCrane/mkdocs-changelog-plugin)
 -   插件 [statistics](https://github.com/TonyCrane/mkdocs-statistics-plugin)
 -   插件 [glightbox](https://github.com/Blueswen/mkdocs-glightbox)

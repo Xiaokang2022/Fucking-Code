@@ -2,7 +2,9 @@
     - "2024/03/09":
         - "newpage": 新增 Python 的“搭建开发环境”
         - "pageupdate": 更新主页
+        - "pageupdate": 更新“直接插入算法”
         - "function": 正式确定网站图标
+        - "function": 提升代码块注释的区分度
     - "2024/03/08":
         - "newpage": 新增“使用指南”
         - "newpage": 新增“Python 简介”

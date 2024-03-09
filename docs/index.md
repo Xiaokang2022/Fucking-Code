@@ -95,7 +95,7 @@ Everything about the fucking code!
 
 <div align="center" markdown>
 [⚡快速开始](./Algorithm/sort/straight_insertion_sort.md){ .md-button .md-button--primary title="干掉那些可恶的代码！" }
-[<big>:star:{ .heart } 支持本项目！</big>](https://github.com/Xiaokang2022/Fucking-Code/){ .md-button .md-button--primary title="给项目点个 Star 吧，球球了！" }
+[<big>:star:{ .heart } 支持本项目</big>](https://github.com/Xiaokang2022/Fucking-Code/){ .md-button .md-button--primary title="给项目点个 Star 吧，球球了！" }
 [✨最新内容](./Python/01.md){ .md-button .md-button--primary title="点我传送到最近更新的页面！" }
 </div>
 

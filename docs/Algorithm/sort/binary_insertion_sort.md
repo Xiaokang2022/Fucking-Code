@@ -1,10 +1,6 @@
----
-comments: true
----
-
 !!! warning "警告"
 
-    此文章还未完善！
+    此文章还未完成
 
 二分插入排序（Binary Insertion Sort），是在插入第 i 个元素时，对前面的 0 ~ i-1 元素进行折半，先跟他们中间的那个元素比，如果小，则对前半再进行折半，否则对后半进行折半，直到 left < right，然后再把第 i 个元素前 1 位与目标位置之间的所有元素后移，再把第 i 个元素放在目标位置上。[^1]
 
@@ -14,12 +10,9 @@ comments: true
 
 ### 1.1 步骤
 
-
 ### 1.2 流程图
 
 注：以下面 C++ 语言的实现过程为准
-
-
 
 ## 二、实现代码
 
@@ -33,22 +26,17 @@ comments: true
     --8<-- "sources/Algorithm/sort/C/binary_insertion_sort.c"
     ```
 
-    
 === "🔴 C++ 20"
 
     ```cpp
     --8<-- "sources/Algorithm/sort/C++/binary_insertion_sort.cpp"
     ```
 
-
-    
 === "🔵 Python 3"
 
     ```python
     --8<-- "sources/Algorithm/sort/Python/binary_insertion_sort.py"
     ```
-
-
 
 === "🟠 Java 21"
 
@@ -56,14 +44,11 @@ comments: true
     --8<-- "sources/Algorithm/sort/Java/binary_insertion_sort.java"
     ```
 
-
 === "🟢 C# 12"
 
     ```csharp
     --8<-- "sources/Algorithm/sort/C#/binary_insertion_sort.cs"
     ```
-
-
 
 === "🟡 TypeScript 5"
 
@@ -73,14 +58,14 @@ comments: true
 
 ### 2.2 测试用例
 
-=== "🔻输入数据"
-    
+=== "🔻 输入数据"
+
     ```text
     9
     6 28 13 72 85 39 41 6 20
     ```
 
-=== "🔺输出数据"
+=== "🔺 输出数据"
 
     ```text
     6 6 13 20 28 39 41 72 85
@@ -90,14 +75,12 @@ comments: true
 
 ### 3.1 时空复杂度
 
-|   复杂度   |  😀最好情况   |  😭最坏情况   |  🫤平均情况   |
+|   复杂度   | 😀 最好情况  | 😭 最坏情况  |  🫤 平均情况  |
 | :--------: | :----------: | :----------: | :----------: |
 | 时间复杂度 | $O(nlog_2n)$ | $O(nlog_2n)$ | $O(nlog_2n)$ |
 | 空间复杂度 |    $O(1)$    |    $O(1)$    |    $O(1)$    |
 
 #### 3.1.1 时间复杂度分析
-
-
 
 #### 3.1.2 空间复杂度分析
 
@@ -127,9 +110,6 @@ $$
 
 ### 4.1 编程题
 
-
 ### 4.2 选择题
-
-
 
 [^1]: [二分插入排序 · 百度百科](https://baike.baidu.com/item/%E4%BA%8C%E5%88%86%E6%B3%95%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/7114334)
