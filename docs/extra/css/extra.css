@@ -5,6 +5,16 @@
     --md-code-font: "Consolas";
 }
 
+img {
+    /*给图片加圆角*/
+    border-radius: 5px;
+}
+
+.admonition:hover {
+    /*给提示框加阴影*/
+    box-shadow: #555 3px 3px 5px;
+}
+
 [data-md-color-scheme="default"] {
     /*亮色样式*/
     --md-default-fg-color: #333;
