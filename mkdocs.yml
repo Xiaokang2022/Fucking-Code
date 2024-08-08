@@ -170,6 +170,9 @@ theme: # 主题设置
     # annotation: material/arrow-right-circle # 提示按钮的图标，详细操作见 https://squidfunk.github.io/mkdocs-material/reference/annotations/#in-content-tabs-tab-1
 
 extra: # 额外设定
+  version:
+    provider: mike
+    alias: true
   homepage: . # 左上角徽标链接的地址（此处为一个点，也就是主页）
   annotate: # 允许代码块非注释内的提示，我也不太懂什么意思，貌似是可以在代码里面加悬浮提示框，而不只是在注释中（感觉这样不好，虽然我不用，但不能没有）
     json: [.s2]
@@ -204,10 +207,19 @@ plugins: # 插件
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])' # 分隔符，我也不懂，我从官方那里找来的
       lang: # 支持的语言
         - zh # 中文
+  - mike:
+      alias_type: symlink
+      redirect_template: null
+      deploy_prefix: ''
+      canonical_version: null
+      version_selector: true
+      css_dir: css
+      javascript_dir: js
   - git-revision-date-localized: # 文章日期显示插件（pip install mkdocs-git-revision-date-localized-plugin）注意：build 时此插件加载非常缓慢！
       enable_creation_date: true # 显示创建的日期
       type: datetime # 每页底下显示最后更新日期，类型是 datatime（日期+时间），或者 data（只有日期）等
       locale: zh # 换成中文显示
+      timezone: Etc/GMT+8 # 设置时区（默认值不是我们想要的）
   - git-authors: # 文章作者显示插件（pip install mkdocs-git-authors-plugin）注意：build 时此插件加载非常缓慢！
       show_contribution: true # 显示贡献比例
       show_line_count: true # 记录行数
@@ -229,7 +241,6 @@ plugins: # 插件
       caption_position: bottom # 标题位置 (bottom, top, left, right)
       background: none # 背景颜色
       shadow: true # 启用或禁用图像阴影
-  - changelog # 日志插件（pip install mkdocs-changelog-plugin）
   - statistics: # 数据统计插件（pip install mkdocs-statistics-plugin）
       codelines_per_minute: 15 # 每分钟可看的代码行数
       words_per_minute: 150 # 每分钟可看的文本数
