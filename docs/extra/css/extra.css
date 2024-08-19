@@ -5,16 +5,6 @@
     --md-code-font: "Consolas";
 }
 
-img {
-    /*给图片加圆角*/
-    border-radius: 5px;
-}
-
-.admonition:hover {
-    /*给提示框加阴影*/
-    box-shadow: #555 3px 3px 5px;
-}
-
 [data-md-color-scheme="default"] {
     /*亮色样式*/
     --md-default-fg-color: #333;
@@ -23,17 +13,13 @@ img {
     --md-primary-bg-color: #1f1f1f;
     --md-typeset-a-color: #007800;
     --md-footer-fg-color: #222;
-    --md-footer-bg-color: #efefef;
-    --md-footer-bg-color--dark: #efefef;
+    --md-footer-bg-color: #f6f6f6;
+    --md-footer-bg-color--dark: #f6f6f6;
     --md-footer-fg-color--light: #222;
     --md-footer-fg-color--lighter: #222;
     --md-code-hl-comment-color: #999;
+    --md-header-bg-color: rgba(232, 232, 232, 0.7);
 }
-
-/*
-0 1 2 3 4 5 6 7 8 9 A B C D E F
-F E D C B A 9 8 7 6 5 4 3 2 1 0
-*/
 
 [data-md-color-scheme="slate"] {
     /*暗色样式*/
@@ -46,11 +32,98 @@ F E D C B A 9 8 7 6 5 4 3 2 1 0
     --md-footer-fg-color--light: #ccc;
     --md-footer-fg-color--lighter: #ccc;
     --md-code-hl-comment-color: #777;
+    --md-header-bg-color: rgba(17, 16, 17, 0.7);
 }
 
+/*顶栏磨砂玻璃效果*/
+[data-md-color-primary="black"] .md-header {
+    background-color: var(--md-header-bg-color);
+}
+
+/*顶栏磨砂玻璃效果*/
+.md-header {
+    transition: none;
+    backdrop-filter: saturate(180%) blur(10px);
+    /* Gaussian blur */
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    /* Safari */
+    background-color: var(--md-header-bg-color);
+}
+
+/*给图片加圆角*/
+img {
+    border-radius: 4px;
+}
+
+/*给按键（kbd）加阴影*/
+kbd:hover {
+    box-shadow: #787878 0px 1px 1px;
+    cursor: pointer;
+}
+
+/*居中 mermaid 绘制的图*/
+.mermaid {
+    text-align: center;
+}
+
+/*去除音乐播放器背景颜色*/
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+/*视频 iframe*/
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+}
+
+/*视频 iframe*/
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*打字机文本*/
+.text {
+    display: inline-block;
+    position: relative;
+    font-size: 15px;
+}
+
+/*打字机光标*/
+.text::after {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 4px;
+    height: 17px;
+    width: 1px;
+    background-color: #fff;
+    animation: san 0.5s steps(1) infinite;
+}
+
+/*光标动画*/
+@keyframes san {
+
+    0%,
+    100% {
+        background-color: var(--md-default-fg-color);
+    }
+
+    50% {
+        background-color: transparent;
+    }
+
+}
+
+/*心脏跳动的样式表，抄官网的代码*/
 @keyframes heart {
 
-    /*心脏跳动的样式表，抄官网的代码*/
     0%,
     40%,
     80%,
@@ -66,52 +139,4 @@ F E D C B A 9 8 7 6 5 4 3 2 1 0
 
 .heart {
     animation: heart 1000ms infinite;
-}
-
-.changelog-type-Added {
-    background-color: #599959;
-}
-
-.changelog-type-Added::before {
-    content: "Added / 新增";
-}
-
-.changelog-type-Changed {
-    background-color: #8C8C4C;
-}
-
-.changelog-type-Changed::before {
-    content: "Changed / 变更";
-}
-
-.changelog-type-Removed {
-    background-color: #B86B6B;
-}
-
-.changelog-type-Removed::before {
-    content: "Removed / 移除";
-}
-
-.changelog-type-Optimized {
-    background-color: #6B6BB8;
-}
-
-.changelog-type-Optimized::before {
-    content: "Optimized / 优化";
-}
-
-.changelog-type-Fixed {
-    background-color: #A666A6;
-}
-
-.changelog-type-Fixed::before {
-    content: "Fixed / 修复";
-}
-
-.changelog-type-Deprecated {
-    background-color: #997B59;
-}
-
-.changelog-type-Deprecated::before {
-    content: "Deprecated / 弃用";
 }

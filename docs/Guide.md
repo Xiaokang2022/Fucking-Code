@@ -120,7 +120,7 @@ flowchart LR
     a(666) --> b[啊吧啊吧]
 ```
 
-这里有一个详细点的：[点我传送](./Algorithm/sort/straight_insertion_sort.md#12-流程图)
+这里有一个详细点的：[点我传送](./Algorithm/sort/straight_insertion_sort.md#122-流程图图解)
 
 顺便一提，这个颜色会随着主题变哟！
 
