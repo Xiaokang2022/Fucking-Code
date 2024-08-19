@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+<!-- 类别详细见 https://squidfunk.github.io/mkdocs-material/customization/ -->
+
+<!-- 页面顶部公告（打字机效果） -->
+{% block announce %}
+{{ super() }}
+
+<p><span class="text"></span></p>
+
+{% endblock %}
