@@ -1,12 +1,23 @@
-## Fucking Code
+<h1 align="center">Fucking Code</h1>
 
-Everything about the fucking code.
+<p align="center"><img src="./docs/logo.png" width=128px /></p>
 
-Home: https://xiaokang2022.github.io/Fucking-Code/
+<p align="center">
+Everything about the fucking code!
+<br/>
+<a href="https://xiaokang2022.github.io/Fucking-Code/">https://xiaokang2022.github.io/Fucking-Code/</a>
+</p>
 
-> [!WARNING]
-> SERIOUS STATEMENT! When using this template, please be sure to change the configuration of the `giscus` comment system to your own!Otherwise, the content of your comment section will be generated in this repository!  
-> 严肃声明！请各位在使用本模板时，务必将 `giscus` 评论系统的相关配置改成自己的！不然你们评论区的内容会在本仓库中产生！
+<p align="center">
+<a href="https://github.com/Xiaokang2022/Fucking-Code/watchers"><img alt="Watchers" src="https://img.shields.io/github/watchers/Xiaokang2022/Fucking-Code?label=Watchers&logo=github&style=flat" title="Watchers" /></a>
+<a href="https://github.com/Xiaokang2022/Fucking-Code/forks"><img alt="Forks" src="https://img.shields.io/github/forks/Xiaokang2022/Fucking-Code?label=Forks&logo=github&style=flat" title="Forks" /></a>
+<a href="https://github.com/Xiaokang2022/Fucking-Code/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/Xiaokang2022/Fucking-Code?label=Stars&color=gold&logo=github&style=flat" title="Stars" /></a>
+<a href="https://github.com/Xiaokang2022/Fucking-Code/issues"><img alt="Issues" src="https://img.shields.io/github/issues/Xiaokang2022/Fucking-Code?label=Issues&logo=github" title="Issues" /></a>
+<a href="https://github.com/Xiaokang2022/Fucking-Code/pulls"><img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/Xiaokang2022/Fucking-Code?label=Pull%20Requests&logo=github" title="Pull Requests" /></a>
+<a href="https://github.com/Xiaokang2022/Fucking-Code/discussions"><img alt="Discussions" src="https://img.shields.io/github/discussions/Xiaokang2022/Fucking-Code?label=Discussions&logo=github" title="Discussions" /></a>
+</p>
+
+<p align="center"><img src="https://repobeats.axiom.co/api/embed/4c2ebccfc8795aa2976c7839d2bdaf9484695c34.svg" /></p>
 
 <p align="center">
     <a href="https://star-history.com/#Xiaokang2022/Fucking-Code&Date">
