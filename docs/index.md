@@ -1,6 +1,10 @@
 ---
 statistics: True
+hide:
+    - statistics
 ---
+
+<br/>
 
 <h1 align="center">Fucking Code</h1>
 
