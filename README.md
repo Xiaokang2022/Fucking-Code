@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> This project has been discontinued and archived, for more new content, go to: <https://github.com/Xiaokang2022/Xiaokang2022.github.io>  
+> 此项目已停止开发并归档，如需获取更多新的内容，请转到：<https://github.com/Xiaokang2022/Xiaokang2022.github.io>
+
 <h1 align="center">Fucking Code</h1>
 
 <p align="center"><img src="./docs/logo.png" width=128px /></p>
